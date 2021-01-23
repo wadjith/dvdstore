@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Active la configuration de l'injection par annotation -->
+    <context:annotation-config />
+
+    <!-- Définit le chemin vers le fichier de configuration. Ici à la racine du classpath car placé dans le dossier resources de maven -->
+    <context:property-placeholder location="classpath:application.properties" />
+
+    <!-- Indiquer à Spring les packages à scanner pour créer automatiquement les beans ou composants -->
+    <context:component-scan base-package="com.mycompany.dvdstore.controller" />
+    <context:component-scan base-package="com.mycompany.dvdstore.service" />
+    <context:component-scan base-package="com.mycompany.dvdstore.repository.file" />
+
+</beans>
