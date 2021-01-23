@@ -11,7 +11,7 @@ public class App
     public static void main( String[] args )
     {
         /* Charge le contexte à partir de SpringBoot */
-        ApplicationContext context = SpringApplication.run(App.class);
+        ApplicationContext context = SpringApplication.run(App.class,args);
         System.out.println( " ************ ENREGISTRER LE FILM ***********" );
         MovieController movieController = context.getBean(MovieController.class);
         movieController.addUsingConsole();
