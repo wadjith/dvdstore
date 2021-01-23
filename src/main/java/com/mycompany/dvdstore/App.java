@@ -22,7 +22,6 @@ public class App
 
     @Bean
     public MovieController getMovieController() {
-        // Un autre moyen de créer dynamiquement les beans
         return new MovieController();
     }
 }
