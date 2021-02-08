@@ -10,10 +10,12 @@ import java.util.List;
 //@Repository
 public class MemoryMovieRepository implements MovieRepositoryInterface {
     private static List<Movie> movies = new ArrayList<>();
+    private static long id;
 
     public void add(Movie movie) {
+        movie.setId(++id);
         movies.add(movie);
-        System.out.println("The movie "+movie.getTitle()+" has been added.");
+        System.out.println("The movie "+movie.getId()+"- "+movie.getTitle()+" has been added.");
     }
 
     @Override
