@@ -1,4 +1,4 @@
-package com.mycompany.dvdstore.repository;
+/*package com.mycompany.dvdstore.repository;
 
 import com.mycompany.dvdstore.entity.Movie;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,3 +49,4 @@ public class MovieRepository implements MovieRepositoryInterface {
                         rs.getString("GENRE"), rs.getString("DESCRIPTION")));
     }
 }
+*/
